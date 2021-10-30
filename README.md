@@ -1,8 +1,9 @@
 
 
 
-
-<img src="icon.png" alt="icon" style="zoom:100%;" align="center" />
+<p align="center">
+<img src="icon.png" alt="icon" style="zoom:100%;"  />
+    </p>
 
 # Tile Map Generator 
 
