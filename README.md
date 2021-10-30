@@ -1,6 +1,8 @@
 
 
-<img src="C:\Users\user\game   dev\gdevlop\map gnerator\icon_loading.png" style="zoom:50%;" />
+
+
+<img src="icon.png" alt="icon" style="zoom:100%;" />
 
 # Tile Map Generator 
 
