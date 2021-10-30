@@ -63,8 +63,10 @@ This is a tool available on itch.io, that generates maps of deferent type of gam
 ### Pull request :
 
 Fork the project then push in your branch a folder named like this "your game engine @userGithub", and this folder has to contain the extension or the sample code that allows using the json export, and a README.md file that explain how to integrate and use your extension, then pull request.
+
 If you realy don't want to fork the project you could propose your file in issues and send your folder as zip file.
-If you find your that your game engine that you use already exist and you estimate that you have another approach or a better adaptation you can pull your folder but don't delete or push over of another user.
+
+If you the game engine that you use already exist and you estimate that you have another approach or a better adaptation you can push your folder but don't delete or write over another folder.
 
 ### Issues :
 
