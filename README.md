@@ -2,7 +2,7 @@
 
 
 
-<img src="icon.png" alt="icon" style="zoom:100%;" />
+<img src="icon.png" alt="icon" style="zoom:100%;" align="center" />
 
 # Tile Map Generator 
 
