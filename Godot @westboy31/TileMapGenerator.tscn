@@ -5,3 +5,6 @@
 [node name="TileMapGenerator" type="TileMap"]
 format = 1
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Initialise the map created from Tile Map Generator "
+}
