@@ -25,3 +25,5 @@ This extension allow you to use the exported json file with **"Create map"** act
 You can also change how the json file refer to your object in GDevelop with the action **"Refer to object"**, by default the extension will use the name file, if the name file contains white space it will be replaced by **"_"**.
 
 For maps which export collisions it possible to use a sprite as with **"Creat collisions"** action.
+
+Don't forget to free space by deleting the json variable with **"Delete json variable"** action.
