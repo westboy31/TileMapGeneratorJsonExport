@@ -7,7 +7,7 @@
 - In Godot you need to turn items images to individual tscn file, for example : item.png &rarr; item.tscn   (don't change base name)
   inside your tscn you are free to add or do anything you want.
 
-- Now you need to import **TileMapGenerator.gd** and **TileMapGenerator.tscn** and **tmg_icon.png** in your file system.
+- Now you need to import **TileMapGenerator.gd**, **TileMapGenerator.tscn**, **TileMapGeneratorCollider** and **tmg_icon.png** in your file system.
 
 - Then create the node TileMapGenerator (as you create any other nodes).
 
