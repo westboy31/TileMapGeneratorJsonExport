@@ -1,4 +1,4 @@
-### [DOWNLOAD](https://github.com/westboy31/TileMapGeneratorJsonExport/tree/main/Phaser%20%40westboy31)
+### [DOWNLOAD](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/westboy31/TileMapGeneratorJsonExport/tree/main/Phaser%20%40westboy31)
 
 > *Note : This is not a plugin phaser like the others, this a javascript file that will facilitate for you usage of the exported json file.*
 
