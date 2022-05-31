@@ -1,7 +1,7 @@
 {
   "author": "",
   "category": "Third-party",
-  "description": "This is the extension for the software [Tile Map Generator](https://westboy.itch.io/tilemapgenerator), which is a tool for generating maps.\nThis extension allow you to use the exported json file with \"Create map\" action, you just have to precise the path for the json file.\nYou can also change how the json file refer to your object in GDevelop with the action \"Refer to object\".",
+  "description": "This is the extension for the software [Tile Map Generator](https://westboy.itch.io/tilemapgenerator), which is a tool for generating maps.\nThis extension allow you to use the exported json file with \"Create map\" action, you just have to precise the path for the json file.\nYou can also change how the json file refer to your object in GDevelop with the action \"Refer to object\".\nFor maps which export collisions it possible to use a sprite as with \"Creat collisions\" action.",
   "extensionNamespace": "",
   "fullName": "Tile Map Generator",
   "helpPath": "",
@@ -63,7 +63,6 @@
               "events": []
             },
             {
-              "folded": true,
               "type": "BuiltinCommonInstructions::ForEachChildVariable",
               "iterableVariableName": "TileMapGenerator.Map.Tiles",
               "valueIteratorVariableName": "T",
@@ -161,6 +160,7 @@
               ]
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -259,6 +259,131 @@
           "optional": false,
           "supplementaryInformation": "",
           "type": "string"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Use a sprite as collision. ",
+      "fullName": "Creat collisions",
+      "functionType": "Action",
+      "group": "",
+      "name": "CreatCollider",
+      "private": false,
+      "sentence": "Use _PARAM1_ as collisionin layer _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::ForEachChildVariable",
+              "iterableVariableName": "TileMapGenerator.Map.Collisions",
+              "valueIteratorVariableName": "C",
+              "keyIteratorVariableName": "",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Collider",
+                    "Variable(C.X)",
+                    "Variable(C.Y)",
+                    "GetArgumentAsString(\"LayerCollider\")"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSize"
+                  },
+                  "parameters": [
+                    "Collider",
+                    "Variable(C.Width)",
+                    "Variable(C.Height)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GetArgumentAsBoolean"
+                      },
+                      "parameters": [
+                        "\"Hide\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "Collider"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Srtie that will be used as collision.",
+          "longDescription": "",
+          "name": "Collider",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Layer where the sprite will be created.",
+          "longDescription": "",
+          "name": "LayerCollider",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "layer"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "yes",
+          "description": "Hide the sprite after creation",
+          "longDescription": "",
+          "name": "Hide",
+          "optional": true,
+          "supplementaryInformation": "",
+          "type": "yesorno"
         }
       ],
       "objectGroups": []
