@@ -1,7 +1,7 @@
 {
   "author": "",
   "category": "Third-party",
-  "description": "This is the extension for the software [Tile Map Generator](https://westboy.itch.io/tilemapgenerator), which is a tool for generating maps.\nThis extension allow you to use the exported json file with \"Create map\" action, you just have to precise the path for the json file.\nYou can also change how the json file refer to your object in GDevelop with the action \"Refer to object\".\nFor maps which export collisions it possible to use a sprite as with \"Creat collisions\" action.",
+  "description": "This is the extension for the software [Tile Map Generator](https://westboy.itch.io/tilemapgenerator), which is a tool for generating maps.\nThis extension allow you to use the exported json file with \"Create map\" action, you just have to precise the path for the json file.\nYou can also change how the json file refer to your object in GDevelop with the action \"Refer to object\".\nFor maps which export collisions it possible to use a sprite as with \"Create collisions\" action.\nDon't forget to free space by deleting the json variable with \"Delete json variable\" action.",
   "extensionNamespace": "",
   "fullName": "Tile Map Generator",
   "helpPath": "",
@@ -21,13 +21,13 @@
   "dependencies": [],
   "eventsFunctions": [
     {
-      "description": "Creat map from json file.",
-      "fullName": "Creat map",
+      "description": "Create map from json file.",
+      "fullName": "Create map",
       "functionType": "Action",
       "group": "",
-      "name": "CreatMap",
+      "name": "CreateMap",
       "private": false,
-      "sentence": "Creat map from the json file : _PARAM1_ in layer _PARAM2_",
+      "sentence": "Create map from the json file : _PARAM1_ in layer _PARAM2_",
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -158,25 +158,6 @@
                   "eventsSheetExpanded": true
                 }
               ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VariableRemoveChild"
-                  },
-                  "parameters": [
-                    "TileMapGenerator",
-                    "\"Map\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ]
         }
@@ -265,10 +246,10 @@
     },
     {
       "description": "Use a sprite as collision. ",
-      "fullName": "Creat collisions",
+      "fullName": "Create collisions",
       "functionType": "Action",
       "group": "",
-      "name": "CreatCollider",
+      "name": "CreateCollider",
       "private": false,
       "sentence": "Use _PARAM1_ as collisionin layer _PARAM2_",
       "events": [
@@ -358,7 +339,7 @@
         {
           "codeOnly": false,
           "defaultValue": "",
-          "description": "Srtie that will be used as collision.",
+          "description": "Sprite that will be used as collision.",
           "longDescription": "",
           "name": "Collider",
           "optional": false,
@@ -378,7 +359,7 @@
         {
           "codeOnly": false,
           "defaultValue": "yes",
-          "description": "Hide the sprite after creation",
+          "description": "Hide the sprite after creation.",
           "longDescription": "",
           "name": "Hide",
           "optional": true,
@@ -386,6 +367,45 @@
           "type": "yesorno"
         }
       ],
+      "objectGroups": []
+    },
+    {
+      "description": "Delete json variable in order to free space for performance.",
+      "fullName": "Delete json variable",
+      "functionType": "Action",
+      "group": "",
+      "name": "DeleteJsonVariable",
+      "private": false,
+      "sentence": "Delete json variable",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": [],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VariableClearChildren"
+              },
+              "parameters": [
+                "TileMapGenerator"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [],
       "objectGroups": []
     }
   ],
