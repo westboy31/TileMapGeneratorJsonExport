@@ -20,3 +20,4 @@ love.draw()
     tmg.draw()
 end
 ```
+> Note :  Collision still not implemented
